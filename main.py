@@ -61,56 +61,56 @@ class Stopwatch:
         t.join()
 
 
-def getData():
-    categories = []
-    with open("input.txt", encoding="utf-8", mode="r") as f:
-        lines = f.readlines()
-        for line in lines:
-            categories.append(line[:-1])
+class CSV:
+    def getData(self):
+        categories = []
+        with open("input.txt", encoding="utf-8", mode="r") as f:
+            lines = f.readlines()
+            for line in lines:
+                categories.append(line[:-1])
 
-    return categories
+        return categories
 
+    def writeCSV(self, categories):
+        with open("data.csv", encoding="utf-8", mode="a") as csv_file:
+            fieldnames = ["solved", "secs", "year", "number", "category"]
+            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
-def writeCSV(categories):
-    with open("data.csv", encoding="utf-8", mode="a") as csv_file:
-        fieldnames = ["solved", "secs", "year", "number", "category"]
-        writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+            # writer.writeheader()
+            line_num = 1
+            for category in categories:
 
-        # writer.writeheader()
-        line_num = 1
-        for category in categories:
-
-            writer.writerow(
-                {
-                    "solved": False,
-                    "secs": -1,
-                    "year": 2017,
-                    "number": line_num,
-                    "category": category,
-                }
-            )
-            line_num += 1
-
-
-def readCSV():
-    probs_input = []
-    with open("data.csv", encoding="utf-8", mode="r") as csv_file:
-        csv_reader = csv.DictReader(csv_file)
-        for row in csv_reader:
-            probs_input.append(
-                Problem(
-                    row["solved"],
-                    row["secs"],
-                    row["year"],
-                    row["number"],
-                    row["category"],
+                writer.writerow(
+                    {
+                        "solved": False,
+                        "secs": -1,
+                        "year": 2017,
+                        "number": line_num,
+                        "category": category,
+                    }
                 )
-            )
+                line_num += 1
 
-    return probs_input
+    def readCSV(self):
+        probs_input = []
+        with open("data.csv", encoding="utf-8", mode="r") as csv_file:
+            csv_reader = csv.DictReader(csv_file)
+            for row in csv_reader:
+                probs_input.append(
+                    Problem(
+                        row["solved"],
+                        row["secs"],
+                        row["year"],
+                        row["number"],
+                        row["category"],
+                    )
+                )
+
+        return probs_input
 
 
-problems = readCSV()
+csv_obj = CSV()
+problems = csv_obj.readCSV()
 problems = sorted(problems, key=lambda x: x.category)
 
 for problem in problems:
