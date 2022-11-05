@@ -3,287 +3,287 @@ False,-1,2007,1,Kinematics
 False,-1,2007,2,Kinematics
 False,-1,2007,3,Kinematics
 False,-1,2007,4,Kinematics
-False,-1,2007,5,Dynamics
 False,-1,2007,6,Kinematics
-False,-1,2007,7,Energy
-False,-1,2007,8,Gravity
-False,-1,2007,9,System of Masses
-False,-1,2007,10,Rigid Bodies
-False,-1,2007,11,Rigid Bodies
-False,-1,2007,12,Dynamics
-False,-1,2007,13,Collisions
-False,-1,2007,14,Dynamics
-False,-1,2007,15,System of Masses
-False,-1,2007,16,Collisions
 False,-1,2007,17,Kinematics
-False,-1,2007,18,Energy
-False,-1,2007,19,Energy
-False,-1,2007,20,Collisions
-False,-1,2007,21,Rigid Bodies
-False,-1,2007,22,Energy
-False,-1,2007,23,Gravity
 False,-1,2007,24,Kinematics
-False,-1,2007,25,Oscillatory Motion
-False,-1,2007,26,Dynamics
-False,-1,2007,27,Rigid Bodies
-False,-1,2007,28,Rigid Bodies
-False,-1,2007,29,Rigid Bodies
-False,-1,2007,30,Rigid Bodies
-False,-1,2007,31,Rigid Bodies
-False,-1,2007,32,Oscillatory Motion
-False,-1,2007,33,Oscillatory Motion
-False,-1,2007,34,Dynamics
-False,-1,2007,35,Energy
-False,-1,2007,36,Dynamics
-False,-1,2007,37,Energy
-False,-1,2007,38,Energy
 False,-1,2008,1,Kinematics
 False,-1,2008,2,Kinematics
 False,-1,2008,3,Kinematics
 False,-1,2008,4,Kinematics
 False,-1,2008,5,Kinematics
 False,-1,2008,6,Kinematics
-False,-1,2008,7,Collisions
-False,-1,2008,8,Dynamics
-False,-1,2008,9,Collisions
-False,-1,2008,10,Dynamics
-False,-1,2008,11,Dynamics
-False,-1,2008,12,Rigid Bodies
-False,-1,2008,13,Oscillatory Motion
-False,-1,2008,14,System of Masses
-False,-1,2008,15,Dynamics
-False,-1,2008,16,Dynamics
-False,-1,2008,17,Dynamics
-False,-1,2008,18,Gravity
-False,-1,2008,19,Energy
-False,-1,2008,20,Elasticity
-False,-1,2008,21,System of Masses
-False,-1,2008,22,Collisions
-False,-1,2008,23,Gravity
 False,-1,2008,24,Kinematics
-False,-1,2008,25,Gravity
-False,-1,2009,1,Collisions
-False,-1,2009,2,Collisions
-False,-1,2009,3,Collisions
-False,-1,2009,4,Dynamics
-False,-1,2009,5,Gravity
 False,-1,2009,6,Kinematics
 False,-1,2009,7,Kinematics
 False,-1,2009,8,Kinematics
 False,-1,2009,9,Kinematics
 False,-1,2009,10,Kinematics
 False,-1,2009,11,Kinematics
-False,-1,2009,12,Energy
-False,-1,2009,13,Dynamics
-False,-1,2009,14,Collisions
-False,-1,2009,15,Dynamics
-False,-1,2009,16,Oscillatory Motion
-False,-1,2009,17,Experiment
-False,-1,2009,18,Oscillatory Motion
 False,-1,2009,19,Kinematics
-False,-1,2009,20,Collisions
-False,-1,2009,21,Gravity
-False,-1,2009,22,Gravity
-False,-1,2009,23,Oscillatory Motion
-False,-1,2009,24,Dynamics
-False,-1,2009,25,Rigid Bodies
 False,-1,2010,1,Kinematics
 False,-1,2010,2,Kinematics
 False,-1,2010,3,Kinematics
 False,-1,2010,4,Kinematics
 False,-1,2010,5,Kinematics
 False,-1,2010,6,Kinematics
+False,-1,2011,1,Kinematics
+False,-1,2011,2,Kinematics
+False,-1,2011,3,Kinematics
+False,-1,2011,4,Kinematics
+False,-1,2011,14,Kinematics
+False,-1,2012,1,Kinematics
+False,-1,2012,2,Kinematics
+False,-1,2012,6,Kinematics
+False,-1,2012,7,Kinematics
+False,-1,2013,1,Kinematics
+False,-1,2013,2,Kinematics
+False,-1,2013,3,Kinematics
+False,-1,2015,1,Kinematics
+False,-1,2015,2,Kinematics
+False,-1,2015,5,Kinematics
+False,-1,2015,21,Kinematics
+False,-1,2016,1,Kinematics
+False,-1,2016,5,Kinematics
+False,-1,2016,6,Kinematics
+False,-1,2016,16,Kinematics
+False,-1,2016,18,Kinematics
+False,-1,2017,4,Kinematics
+False,-1,2017,5,Kinematics
+False,-1,2017,17,Kinematics
+False,-1,2007,5,Dynamics
+False,-1,2007,12,Dynamics
+False,-1,2007,14,Dynamics
+False,-1,2007,26,Dynamics
+False,-1,2007,34,Dynamics
+False,-1,2007,36,Dynamics
+False,-1,2008,8,Dynamics
+False,-1,2008,10,Dynamics
+False,-1,2008,11,Dynamics
+False,-1,2008,15,Dynamics
+False,-1,2008,16,Dynamics
+False,-1,2008,17,Dynamics
+False,-1,2009,4,Dynamics
+False,-1,2009,13,Dynamics
+False,-1,2009,15,Dynamics
+False,-1,2009,24,Dynamics
 False,-1,2010,7,Dynamics
 False,-1,2010,8,Dynamics
 False,-1,2010,9,Dynamics
 False,-1,2010,10,Dynamics
 False,-1,2010,11,Dynamics
-False,-1,2010,12,Energy
-False,-1,2010,13,Rigid Bodies
-False,-1,2010,14,Collisions
-False,-1,2010,15,System of Masses
-False,-1,2010,16,System of Masses
-False,-1,2010,17,Gravity
-False,-1,2010,18,Energy
-False,-1,2010,19,Energy
-False,-1,2010,20,Energy
-False,-1,2010,21,Gravity
 False,-1,2010,22,Dynamics
-False,-1,2010,23,Fluids
-False,-1,2010,24,Rigid Bodies
-False,-1,2010,25,Gravity
-False,-1,2011,1,Kinematics
-False,-1,2011,2,Kinematics
-False,-1,2011,3,Kinematics
-False,-1,2011,4,Kinematics
-False,-1,2011,5,Gravity
-False,-1,2011,6,Collisions
-False,-1,2011,7,Rigid Bodies
-False,-1,2011,8,Fluids
 False,-1,2011,9,Dynamics
-False,-1,2011,10,Oscillatory Motion
-False,-1,2011,11,Fluids
-False,-1,2011,12,Gravity
-False,-1,2011,13,Rigid Bodies
-False,-1,2011,14,Kinematics
-False,-1,2011,15,Oscillatory Motion
 False,-1,2011,16,Dynamics
 False,-1,2011,17,Dynamics
-False,-1,2011,18,Energy
-False,-1,2011,19,Oscillatory Motion
-False,-1,2011,20,Oscillatory Motion
-False,-1,2011,21,Dimensional Analysis
-False,-1,2011,22,Energy
-False,-1,2011,23,Gravity
-False,-1,2011,24,Rigid Bodies
-False,-1,2011,25,Rigid Bodies
-False,-1,2012,1,Kinematics
-False,-1,2012,2,Kinematics
 False,-1,2012,3,Dynamics
-False,-1,2012,4,System of Masses
-False,-1,2012,5,Collisions
-False,-1,2012,6,Kinematics
-False,-1,2012,7,Kinematics
-False,-1,2012,8,Energy
-False,-1,2012,9,Gravity
-False,-1,2012,10,Rigid Bodies
 False,-1,2012,11,Dynamics
 False,-1,2012,12,Dynamics
-False,-1,2012,13,Energy
-False,-1,2012,14,Rigid Bodies
-False,-1,2012,15,Energy
-False,-1,2012,16,Oscillatory Motion
-False,-1,2012,17,Oscillatory Motion
-False,-1,2012,18,Oscillatory Motion
-False,-1,2012,19,Fluids
-False,-1,2012,20,Fluids
 False,-1,2012,21,Dynamics
-False,-1,2012,22,Dimensional Analysis
-False,-1,2012,23,Experiment
 False,-1,2012,24,Dynamics
-False,-1,2012,25,Gravity
-False,-1,2013,1,Kinematics
-False,-1,2013,2,Kinematics
-False,-1,2013,3,Kinematics
 False,-1,2013,4,Dynamics
 False,-1,2013,5,Dynamics
 False,-1,2013,6,Dynamics
+False,-1,2013,17,Dynamics
+False,-1,2013,19,Dynamics
+False,-1,2013,20,Dynamics
+False,-1,2013,22,Dynamics
+False,-1,2013,25,Dynamics
+False,-1,2014,1,Dynamics
+False,-1,2014,5,Dynamics
+False,-1,2014,7,Dynamics
+False,-1,2014,10,Dynamics
+False,-1,2014,18,Dynamics
+False,-1,2014,19,Dynamics
+False,-1,2014,21,Dynamics
+False,-1,2015,4,Dynamics
+False,-1,2015,12,Dynamics
+False,-1,2015,13,Dynamics
+False,-1,2015,14,Dynamics
+False,-1,2016,4,Dynamics
+False,-1,2016,10,Dynamics
+False,-1,2016,23,Dynamics
+False,-1,2017,1,Dynamics
+False,-1,2017,6,Dynamics
+False,-1,2017,13,Dynamics
+False,-1,2017,18,Dynamics
+False,-1,2017,19,Dynamics
+False,-1,2007,7,Energy
+False,-1,2007,18,Energy
+False,-1,2007,19,Energy
+False,-1,2007,22,Energy
+False,-1,2007,35,Energy
+False,-1,2007,37,Energy
+False,-1,2007,38,Energy
+False,-1,2008,19,Energy
+False,-1,2009,12,Energy
+False,-1,2010,12,Energy
+False,-1,2010,18,Energy
+False,-1,2010,19,Energy
+False,-1,2010,20,Energy
+False,-1,2011,18,Energy
+False,-1,2011,22,Energy
+False,-1,2012,8,Energy
+False,-1,2012,13,Energy
+False,-1,2012,15,Energy
 False,-1,2013,7,Energy
 False,-1,2013,8,Energy
 False,-1,2013,9,Energy
-False,-1,2013,10,Rigid Bodies
-False,-1,2013,11,System of Masses
-False,-1,2013,12,Rigid Bodies
-False,-1,2013,13,Gravity
-False,-1,2013,14,Collisions
-False,-1,2013,15,Fluids
-False,-1,2013,16,Dimensional Analysis
-False,-1,2013,17,Dynamics
-False,-1,2013,18,System of Masses
-False,-1,2013,19,Dynamics
-False,-1,2013,20,Dynamics
-False,-1,2013,21,Oscillatory Motion
-False,-1,2013,22,Dynamics
 False,-1,2013,23,Energy
 False,-1,2013,24,Energy
-False,-1,2013,25,Dynamics
-False,-1,2014,1,Dynamics
-False,-1,2014,2,Rigid Bodies
-False,-1,2014,3,Fluids
-False,-1,2014,4,System of Masses
-False,-1,2014,5,Dynamics
-False,-1,2014,6,Collisions
-False,-1,2014,7,Dynamics
-False,-1,2014,8,Oscillatory Motion
 False,-1,2014,9,Energy
-False,-1,2014,10,Dynamics
 False,-1,2014,11,Energy
-False,-1,2014,12,Dimensional Analysis
-False,-1,2014,13,Dimensional Analysis
-False,-1,2014,14,Rigid Bodies
 False,-1,2014,15,Energy
-False,-1,2014,16,Collisions
-False,-1,2014,17,Gravity
-False,-1,2014,18,Dynamics
-False,-1,2014,19,Dynamics
 False,-1,2014,20,Energy
-False,-1,2014,21,Dynamics
-False,-1,2014,22,Gravity
-False,-1,2014,23,System of Masses
-False,-1,2014,24,System of Masses
 False,-1,2014,25,Energy
-False,-1,2015,1,Kinematics
-False,-1,2015,2,Kinematics
 False,-1,2015,3,Energy
-False,-1,2015,4,Dynamics
-False,-1,2015,5,Kinematics
+False,-1,2015,10,Energy
+False,-1,2015,15,Energy
+False,-1,2015,16,Energy
+False,-1,2015,22,Energy
+False,-1,2015,23,Energy
+False,-1,2016,3,Energy
+False,-1,2016,9,Energy
+False,-1,2016,11,Energy
+False,-1,2016,19,Energy
+False,-1,2017,7,Energy
+False,-1,2017,8,Energy
+False,-1,2017,24,Energy
+False,-1,2007,13,Collisions
+False,-1,2007,16,Collisions
+False,-1,2007,20,Collisions
+False,-1,2008,7,Collisions
+False,-1,2008,9,Collisions
+False,-1,2008,22,Collisions
+False,-1,2009,1,Collisions
+False,-1,2009,2,Collisions
+False,-1,2009,3,Collisions
+False,-1,2009,14,Collisions
+False,-1,2009,20,Collisions
+False,-1,2010,14,Collisions
+False,-1,2011,6,Collisions
+False,-1,2012,5,Collisions
+False,-1,2013,14,Collisions
+False,-1,2014,6,Collisions
+False,-1,2014,16,Collisions
 False,-1,2015,6,Collisions
 False,-1,2015,7,Collisions
 False,-1,2015,8,Collisions
 False,-1,2015,9,Collisions
-False,-1,2015,10,Energy
-False,-1,2015,11,Fluids
-False,-1,2015,12,Dynamics
-False,-1,2015,13,Dynamics
-False,-1,2015,14,Dynamics
-False,-1,2015,15,Energy
-False,-1,2015,16,Energy
-False,-1,2015,17,Dimensional Analysis
-False,-1,2015,18,Graphs
-False,-1,2015,19,Oscillatory Motion
-False,-1,2015,20,Fluids
-False,-1,2015,21,Kinematics
-False,-1,2015,22,Energy
-False,-1,2015,23,Energy
-False,-1,2015,24,Waves
-False,-1,2015,25,Oscillatory Motion
-False,-1,2016,1,Kinematics
-False,-1,2016,2,Fluids
-False,-1,2016,3,Energy
-False,-1,2016,4,Dynamics
-False,-1,2016,5,Kinematics
-False,-1,2016,6,Kinematics
-False,-1,2016,7,Oscillatory Motion
-False,-1,2016,8,Gravity
-False,-1,2016,9,Energy
-False,-1,2016,10,Dynamics
-False,-1,2016,11,Energy
-False,-1,2016,12,Fluids
 False,-1,2016,13,Collisions
-False,-1,2016,14,Oscillatory Motion
-False,-1,2016,15,Oscillatory Motion
-False,-1,2016,16,Kinematics
-False,-1,2016,17,Rigid Bodies
-False,-1,2016,18,Kinematics
-False,-1,2016,19,Energy
-False,-1,2016,20,Rigid Bodies
-False,-1,2016,21,System of Masses
-False,-1,2016,22,System of Masses
-False,-1,2016,23,Dynamics
-False,-1,2016,24,Rigid Bodies
-False,-1,2016,25,Other
-False,-1,2017,1,Dynamics
-False,-1,2017,2,Oscillatory Motion
-False,-1,2017,3,System of Masses
-False,-1,2017,4,Kinematics
-False,-1,2017,5,Kinematics
-False,-1,2017,6,Dynamics
-False,-1,2017,7,Energy
-False,-1,2017,8,Energy
-False,-1,2017,9,Fluids
-False,-1,2017,10,Fluids
-False,-1,2017,11,System of Masses
-False,-1,2017,12,System of Masses
-False,-1,2017,13,Dynamics
-False,-1,2017,14,Rigid Bodies
-False,-1,2017,15,Rigid Bodies
-False,-1,2017,16,Rigid Bodies
-False,-1,2017,17,Kinematics
-False,-1,2017,18,Dynamics
-False,-1,2017,19,Dynamics
 False,-1,2017,20,Collisions
 False,-1,2017,21,Collisions
 False,-1,2017,22,Collisions
-False,-1,2017,23,Waves
-False,-1,2017,24,Energy
+False,-1,2007,9,System of Masses
+False,-1,2007,15,System of Masses
+False,-1,2008,14,System of Masses
+False,-1,2008,21,System of Masses
+False,-1,2010,15,System of Masses
+False,-1,2010,16,System of Masses
+False,-1,2012,4,System of Masses
+False,-1,2013,11,System of Masses
+False,-1,2013,18,System of Masses
+False,-1,2014,4,System of Masses
+False,-1,2014,23,System of Masses
+False,-1,2014,24,System of Masses
+False,-1,2016,21,System of Masses
+False,-1,2016,22,System of Masses
+False,-1,2017,3,System of Masses
+False,-1,2017,11,System of Masses
+False,-1,2017,12,System of Masses
+False,-1,2007,10,Rigid Bodies
+False,-1,2007,11,Rigid Bodies
+False,-1,2007,21,Rigid Bodies
+False,-1,2007,27,Rigid Bodies
+False,-1,2007,28,Rigid Bodies
+False,-1,2007,29,Rigid Bodies
+False,-1,2007,30,Rigid Bodies
+False,-1,2007,31,Rigid Bodies
+False,-1,2008,12,Rigid Bodies
+False,-1,2009,25,Rigid Bodies
+False,-1,2010,13,Rigid Bodies
+False,-1,2010,24,Rigid Bodies
+False,-1,2011,7,Rigid Bodies
+False,-1,2011,13,Rigid Bodies
+False,-1,2011,24,Rigid Bodies
+False,-1,2011,25,Rigid Bodies
+False,-1,2012,10,Rigid Bodies
+False,-1,2012,14,Rigid Bodies
+False,-1,2013,10,Rigid Bodies
+False,-1,2013,12,Rigid Bodies
+False,-1,2014,2,Rigid Bodies
+False,-1,2014,14,Rigid Bodies
+False,-1,2016,17,Rigid Bodies
+False,-1,2016,20,Rigid Bodies
+False,-1,2016,24,Rigid Bodies
+False,-1,2017,14,Rigid Bodies
+False,-1,2017,15,Rigid Bodies
+False,-1,2017,16,Rigid Bodies
+False,-1,2007,25,Oscillatory Motion
+False,-1,2007,32,Oscillatory Motion
+False,-1,2007,33,Oscillatory Motion
+False,-1,2008,13,Oscillatory Motion
+False,-1,2009,16,Oscillatory Motion
+False,-1,2009,18,Oscillatory Motion
+False,-1,2009,23,Oscillatory Motion
+False,-1,2011,10,Oscillatory Motion
+False,-1,2011,15,Oscillatory Motion
+False,-1,2011,19,Oscillatory Motion
+False,-1,2011,20,Oscillatory Motion
+False,-1,2012,16,Oscillatory Motion
+False,-1,2012,17,Oscillatory Motion
+False,-1,2012,18,Oscillatory Motion
+False,-1,2013,21,Oscillatory Motion
+False,-1,2014,8,Oscillatory Motion
+False,-1,2015,19,Oscillatory Motion
+False,-1,2015,25,Oscillatory Motion
+False,-1,2016,7,Oscillatory Motion
+False,-1,2016,14,Oscillatory Motion
+False,-1,2016,15,Oscillatory Motion
+False,-1,2017,2,Oscillatory Motion
+False,-1,2007,8,Gravity
+False,-1,2007,23,Gravity
+False,-1,2008,18,Gravity
+False,-1,2008,23,Gravity
+False,-1,2008,25,Gravity
+False,-1,2009,5,Gravity
+False,-1,2009,21,Gravity
+False,-1,2009,22,Gravity
+False,-1,2010,17,Gravity
+False,-1,2010,21,Gravity
+False,-1,2010,25,Gravity
+False,-1,2011,5,Gravity
+False,-1,2011,12,Gravity
+False,-1,2011,23,Gravity
+False,-1,2012,9,Gravity
+False,-1,2012,25,Gravity
+False,-1,2013,13,Gravity
+False,-1,2014,17,Gravity
+False,-1,2014,22,Gravity
+False,-1,2016,8,Gravity
 False,-1,2017,25,Gravity
+False,-1,2010,23,Fluids
+False,-1,2011,8,Fluids
+False,-1,2011,11,Fluids
+False,-1,2012,19,Fluids
+False,-1,2012,20,Fluids
+False,-1,2013,15,Fluids
+False,-1,2014,3,Fluids
+False,-1,2015,11,Fluids
+False,-1,2015,20,Fluids
+False,-1,2016,2,Fluids
+False,-1,2016,12,Fluids
+False,-1,2017,9,Fluids
+False,-1,2017,10,Fluids
+False,-1,2016,25,Other
+False,-1,2008,20,Elasticity
+False,-1,2009,17,Experiment
+False,-1,2012,23,Experiment
+False,-1,2011,21,Dimensional Analysis
+False,-1,2012,22,Dimensional Analysis
+False,-1,2013,16,Dimensional Analysis
+False,-1,2014,12,Dimensional Analysis
+False,-1,2014,13,Dimensional Analysis
+False,-1,2015,17,Dimensional Analysis
+False,-1,2015,18,Graphs
+False,-1,2015,24,Waves
+False,-1,2017,23,Waves

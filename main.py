@@ -31,13 +31,13 @@ class Problem:
 
     def __repr__(self):
         return (
-            self.solved
+            str(self.solved)
             + " "
-            + self.secs
+            + str(self.secs)
             + " "
-            + self.year
+            + str(self.year)
             + " "
-            + self.number
+            + str(self.number)
             + " "
             + self.category
         )
@@ -90,6 +90,10 @@ class CSV:
         return csv_categories
 
     def initCSV(self, csv_categories):
+        solved = False
+        secs = -1
+        year = 2017
+
         with open("data.csv", encoding="utf-8", mode="a") as csv_file:
             fieldnames = ["solved", "secs", "year", "number", "category"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
@@ -100,31 +104,32 @@ class CSV:
 
                 writer.writerow(
                     {
-                        "solved": False,
-                        "secs": -1,
-                        "year": 2017,
+                        "solved": solved,
+                        "secs": secs,
+                        "year": year,
                         "number": line_num,
                         "category": csv_category,
                     }
                 )
                 line_num += 1
 
-    def writeCSV(self, problem_list):
+    def writeCSV(self, csv_problem_list):
         with open("data.csv", encoding="utf-8", mode="w") as csv_file:
             fieldnames = ["solved", "secs", "year", "number", "category"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             writer.writeheader()
 
-            for problem_csv in problem_list:
-                writer.writerow(
-                    {
-                        "solved": problem_csv["solved"],
-                        "secs": problem_csv["secs"],
-                        "year": problem_csv["year"],
-                        "number": problem_csv["number"],
-                        "category": problem_csv["category"],
-                    }
-                )
+            for key, csv_problems in csv_problem_list.items():
+                for csv_problem in csv_problems:
+                    writer.writerow(
+                        {
+                            "solved": ("True" if csv_problem.solved else "False"),
+                            "secs": csv_problem.secs,
+                            "year": csv_problem.year,
+                            "number": csv_problem.number,
+                            "category": csv_problem.category,
+                        }
+                    )
 
     def readCSVdict(self):
         probs_input = dict()
@@ -137,27 +142,10 @@ class CSV:
             for row in csv_reader:
                 probs_input[row["category"]].append(
                     Problem(
-                        row["solved"],
-                        row["secs"],
-                        row["year"],
-                        row["number"],
-                        row["category"],
-                    )
-                )
-
-        return probs_input
-
-    def readCSVlist(self):
-        probs_input = []
-        with open("data.csv", encoding="utf-8", mode="r") as csv_file:
-            csv_reader = csv.DictReader(csv_file)
-            for row in csv_reader:
-                probs_input.append(
-                    Problem(
-                        row["solved"],
-                        row["secs"],
-                        row["year"],
-                        row["number"],
+                        (row["solved"] == "True"),
+                        int(row["secs"]),
+                        int(row["year"]),
+                        int(row["number"]),
                         row["category"],
                     )
                 )
@@ -171,11 +159,18 @@ if __name__ == "__main__":
 
     csv_obj = CSV()
     problems = csv_obj.readCSVdict()
-    # problems = sorted(problems, key=lambda x: x.category)
-
+    problem_list = sorted(problems["Kinematics"], key=lambda x: x.number)
     is_quit = False
+
     while not is_quit:
         category = input()
         category_problems = problems[Problem.problem_categories[int(category)]]
         for category_problem in category_problems:
-            print(category_problem)
+            # category_problem.solved = False
+            # add action
+            pass
+
+        problems[Problem.problem_categories[int(category)]] = category_problems
+        is_quit = "q" == input()
+
+    csv_obj.writeCSV(problems)
