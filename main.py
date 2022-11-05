@@ -4,6 +4,24 @@ from threading import Thread
 
 
 class Problem:
+    problem_categories = [
+        "Kinematics",
+        "Dynamics",
+        "Energy",
+        "Collisions",
+        "System of Masses",
+        "Rigid Bodies",
+        "Oscillatory Motion",
+        "Gravity",
+        "Fluids",
+        "Other",
+        "Elasticity",
+        "Experiment",
+        "Dimensional Analysis",
+        "Graphs",
+        "Waves",
+    ]
+
     def __init__(self, solved, secs, year, number, category):
         self.solved = solved
         self.secs = secs
@@ -63,22 +81,22 @@ class Stopwatch:
 
 class CSV:
     def getData(self):
-        categories = []
+        csv_categories = []
         with open("input.txt", encoding="utf-8", mode="r") as f:
             lines = f.readlines()
             for line in lines:
-                categories.append(line[:-1])
+                csv_categories.append(line[:-1])
 
-        return categories
+        return csv_categories
 
-    def writeCSV(self, categories):
+    def initCSV(self, csv_categories):
         with open("data.csv", encoding="utf-8", mode="a") as csv_file:
             fieldnames = ["solved", "secs", "year", "number", "category"]
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
             # writer.writeheader()
             line_num = 1
-            for category in categories:
+            for csv_category in csv_categories:
 
                 writer.writerow(
                     {
@@ -86,12 +104,50 @@ class CSV:
                         "secs": -1,
                         "year": 2017,
                         "number": line_num,
-                        "category": category,
+                        "category": csv_category,
                     }
                 )
                 line_num += 1
 
-    def readCSV(self):
+    def writeCSV(self, problem_list):
+        with open("data.csv", encoding="utf-8", mode="w") as csv_file:
+            fieldnames = ["solved", "secs", "year", "number", "category"]
+            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+            writer.writeheader()
+
+            for problem_csv in problem_list:
+                writer.writerow(
+                    {
+                        "solved": problem_csv["solved"],
+                        "secs": problem_csv["secs"],
+                        "year": problem_csv["year"],
+                        "number": problem_csv["number"],
+                        "category": problem_csv["category"],
+                    }
+                )
+
+    def readCSVdict(self):
+        probs_input = dict()
+
+        for csv_category in Problem.problem_categories:
+            probs_input[csv_category] = list()
+
+        with open("data.csv", encoding="utf-8", mode="r") as csv_file:
+            csv_reader = csv.DictReader(csv_file)
+            for row in csv_reader:
+                probs_input[row["category"]].append(
+                    Problem(
+                        row["solved"],
+                        row["secs"],
+                        row["year"],
+                        row["number"],
+                        row["category"],
+                    )
+                )
+
+        return probs_input
+
+    def readCSVlist(self):
         probs_input = []
         with open("data.csv", encoding="utf-8", mode="r") as csv_file:
             csv_reader = csv.DictReader(csv_file)
@@ -109,9 +165,17 @@ class CSV:
         return probs_input
 
 
-csv_obj = CSV()
-problems = csv_obj.readCSV()
-problems = sorted(problems, key=lambda x: x.category)
+if __name__ == "__main__":
+    # implement problem dispenser and time updater
+    # implement last 10 problem archive
 
-for problem in problems:
-    print(problem)
+    csv_obj = CSV()
+    problems = csv_obj.readCSVdict()
+    # problems = sorted(problems, key=lambda x: x.category)
+
+    is_quit = False
+    while not is_quit:
+        category = input()
+        category_problems = problems[Problem.problem_categories[int(category)]]
+        for category_problem in category_problems:
+            print(category_problem)
