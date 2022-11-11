@@ -102,7 +102,6 @@ class CSV:
         with open("data.csv", encoding="utf-8", mode="a") as csv_file:
             writer = csv.DictWriter(csv_file, fieldnames=CSV.fieldnames)
 
-            # writer.writeheader()
             line_num = 1
             for csv_category in csv_categories:
 
@@ -157,10 +156,15 @@ class CSV:
 
     def writeStatsCSV(self, time_list):
         with open("stats.txt", encoding="utf-8", mode="w") as txt_file:
-            txt_file.write(",".join(Problem.problem_categories))
+            pcats = Problem.problem_categories
+            for i in range(len(pcats)):
+                write_list = list()
+                write_list.append(pcats[i])
+                for item in time_list[pcats[i]]:
+                    write_list.append(str(item))
 
-            for key, list_category in time_list.items():
-                txt_file.write(",".join(list_category))
+                txt_file.write(",".join(write_list))
+                txt_file.write("\n")
 
     def readStatsCSV(self):
         probs_input = dict()
@@ -170,21 +174,23 @@ class CSV:
         with open("stats.txt", encoding="utf-8", mode="r") as txt_file:
             for line in txt_file:
                 times = line.split(",")
-                probs_input[times[0]] = times[1:]
-                # print(times[1:])
+                probs_input[times[0]] = [int(x) for x in times[1:]]
 
         return probs_input
 
 
 def getCategory():
+    print("\n")
     for number in range(len(Problem.problem_categories)):
         print(number, Problem.problem_categories[number])
 
     category = input("category:\n")
-    return Problem.problem_categories[int(category)]
+    category_str = Problem.problem_categories[int(category)]
+    print(category_str, "\n")
+    return category_str
 
 
-def doProblems(problems):
+def doProblems(problems, times):
     is_quit = False
     while not is_quit:
         choice = getCategory()
@@ -192,7 +198,7 @@ def doProblems(problems):
 
         quit_problems = False
         for category_problem in category_problems:
-            print(category_problem)
+            print(category_problem, "\n")
             stopwatch = Stopwatch()
             stopwatch.start()
 
@@ -200,12 +206,14 @@ def doProblems(problems):
             category_problem.solved = True
             times[choice].append(stopwatch.value)
 
-            quit_problems = "q" == input("q or n: \n")
+            quit_problems = "q" == input("\nquit category? q or n: \n")
             if quit_problems:
                 break
 
         problems[choice] = category_problems
-        is_quit = "q" == input("q or n: \n")
+        is_quit = "q" == input("\nquit problems? q or n: \n")
+
+    return problems, times
 
 
 def getStats(times):
@@ -216,26 +224,33 @@ def getStats(times):
 
         s = pd.Series(category_times)
         print("lifetime stats")
-        s.describe()
+        print(s.describe())
 
         while len(category_times) > 10:
             category_times.pop(0)
 
         s = pd.Series(category_times)
         print("last 10 stats")
-        s.describe()
+        print(s.describe())
 
         is_quit = "q" == input("q or n: \n")
 
+    return times
+
 
 if __name__ == "__main__":
-    # have some stats functions to automatically find last 10 average, mean, mode, stddev, etc for all time and last 10
     # TODO make pylint warnings go away
+    # TODO add quitting without saving
 
     csv_obj = CSV()
     problems = csv_obj.readCSVdict()
     times = csv_obj.readStatsCSV()
-    # problem_list = sorted(problems["Kinematics"], key=lambda x: x.number)
+
+    option = input("doProblems, getStats? p or s: ")
+    if option == "p":
+        problems, times = doProblems(problems, times)
+    elif option == "s":
+        getStats(times)
 
     csv_obj.writeStatsCSV(times)
     csv_obj.writeCSV(problems)
