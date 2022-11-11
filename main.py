@@ -1,5 +1,6 @@
 import csv
 import time
+import pandas as pd
 from threading import Thread
 
 
@@ -59,17 +60,19 @@ class Stopwatch:
                 self.value += 1
 
     def askinput(self):
-        choice = input()
+        choice = input("sleep, time, kill\n")
 
         if choice == "s":
             self.sleep = not self.sleep
+        elif choice == "t":
+            print(self.value)
         elif choice == "k":
             self.kill = True
             return 0
 
         return 1
 
-    def stopwatch(self):
+    def start(self):
         t = Thread(target=self.counter, args=(10,))
         t.start()
 
@@ -152,25 +155,77 @@ class CSV:
 
         return probs_input
 
+    def writeStatsCSV(self, time_list):
+        with open("stats.txt", encoding="utf-8", mode="w") as txt_file:
+            fieldnames = [
+                "Kinematics",
+                "Dynamics",
+                "Energy",
+                "Collisions",
+                "System of Masses",
+                "Rigid Bodies",
+                "Oscillatory Motion",
+                "Gravity",
+                "Fluids",
+                "Other",
+                "Elasticity",
+                "Experiment",
+                "Dimensional Analysis",
+                "Graphs",
+                "Waves",
+            ]
+            txt_file.write(",".join(fieldnames))
+
+            for key, list_category in time_list.items():
+                txt_file.write(",".join(list_category))
+
+    def readStatsCSV(self):
+        probs_input = dict()
+        for csv_category in Problem.problem_categories:
+            probs_input[csv_category] = list()
+
+        with open("stats.txt", encoding="utf-8", mode="r") as txt_file:
+            for line in txt_file:
+                times = line.split(",")
+                probs_input[times[0]] = times[1:]
+                print(times[1:])
+
+        return probs_input
+
 
 if __name__ == "__main__":
-    # implement problem dispenser and time updater
     # implement last 10 problem archive
+    # read in another file
+    # store as csv file, times of each, versus category
+    # do some string parsing
+    # as you do new problems, add to respective list
+    # have some stats functions to automatically find last 10 average, mean, mode, stddev, etc for all time and last 10
+    # min(len, 10)
+    # TODO make pylint warnings go away
 
     csv_obj = CSV()
     problems = csv_obj.readCSVdict()
     problem_list = sorted(problems["Kinematics"], key=lambda x: x.number)
-    is_quit = False
 
+    is_quit = False
     while not is_quit:
-        category = input()
+        category = input("category:\n")
         category_problems = problems[Problem.problem_categories[int(category)]]
+
+        quit_problems = False
         for category_problem in category_problems:
-            # category_problem.solved = False
-            # add action
-            pass
+            print(category_problem)
+            stopwatch = Stopwatch()
+            stopwatch.start()
+
+            category_problem.secs = stopwatch.value
+            category_problem.solved = True
+
+            quit_problems = "q" == input("q or n: \n")
+            if quit_problems:
+                break
 
         problems[Problem.problem_categories[int(category)]] = category_problems
-        is_quit = "q" == input()
+        is_quit = "q" == input("q or n: \n")
 
     csv_obj.writeCSV(problems)
