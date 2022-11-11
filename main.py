@@ -83,6 +83,8 @@ class Stopwatch:
 
 
 class CSV:
+    fieldnames = ["solved", "secs", "year", "number", "category"]
+
     def getData(self):
         csv_categories = []
         with open("input.txt", encoding="utf-8", mode="r") as f:
@@ -98,8 +100,7 @@ class CSV:
         year = 2017
 
         with open("data.csv", encoding="utf-8", mode="a") as csv_file:
-            fieldnames = ["solved", "secs", "year", "number", "category"]
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+            writer = csv.DictWriter(csv_file, fieldnames=CSV.fieldnames)
 
             # writer.writeheader()
             line_num = 1
@@ -118,8 +119,7 @@ class CSV:
 
     def writeCSV(self, csv_problem_list):
         with open("data.csv", encoding="utf-8", mode="w") as csv_file:
-            fieldnames = ["solved", "secs", "year", "number", "category"]
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+            writer = csv.DictWriter(csv_file, fieldnames=CSV.fieldnames)
             writer.writeheader()
 
             for key, csv_problems in csv_problem_list.items():
@@ -157,24 +157,7 @@ class CSV:
 
     def writeStatsCSV(self, time_list):
         with open("stats.txt", encoding="utf-8", mode="w") as txt_file:
-            fieldnames = [
-                "Kinematics",
-                "Dynamics",
-                "Energy",
-                "Collisions",
-                "System of Masses",
-                "Rigid Bodies",
-                "Oscillatory Motion",
-                "Gravity",
-                "Fluids",
-                "Other",
-                "Elasticity",
-                "Experiment",
-                "Dimensional Analysis",
-                "Graphs",
-                "Waves",
-            ]
-            txt_file.write(",".join(fieldnames))
+            txt_file.write(",".join(Problem.problem_categories))
 
             for key, list_category in time_list.items():
                 txt_file.write(",".join(list_category))
@@ -188,29 +171,24 @@ class CSV:
             for line in txt_file:
                 times = line.split(",")
                 probs_input[times[0]] = times[1:]
-                print(times[1:])
+                # print(times[1:])
 
         return probs_input
 
 
-if __name__ == "__main__":
-    # implement last 10 problem archive
-    # read in another file
-    # store as csv file, times of each, versus category
-    # do some string parsing
-    # as you do new problems, add to respective list
-    # have some stats functions to automatically find last 10 average, mean, mode, stddev, etc for all time and last 10
-    # min(len, 10)
-    # TODO make pylint warnings go away
+def getCategory():
+    for number in range(len(Problem.problem_categories)):
+        print(number, Problem.problem_categories[number])
 
-    csv_obj = CSV()
-    problems = csv_obj.readCSVdict()
-    problem_list = sorted(problems["Kinematics"], key=lambda x: x.number)
+    category = input("category:\n")
+    return Problem.problem_categories[int(category)]
 
+
+def doProblems(problems):
     is_quit = False
     while not is_quit:
-        category = input("category:\n")
-        category_problems = problems[Problem.problem_categories[int(category)]]
+        choice = getCategory()
+        category_problems = problems[choice]
 
         quit_problems = False
         for category_problem in category_problems:
@@ -220,12 +198,44 @@ if __name__ == "__main__":
 
             category_problem.secs = stopwatch.value
             category_problem.solved = True
+            times[choice].append(stopwatch.value)
 
             quit_problems = "q" == input("q or n: \n")
             if quit_problems:
                 break
 
-        problems[Problem.problem_categories[int(category)]] = category_problems
+        problems[choice] = category_problems
         is_quit = "q" == input("q or n: \n")
 
+
+def getStats(times):
+    is_quit = False
+    while not is_quit:
+        choice = getCategory()
+        category_times = times[choice]
+
+        s = pd.Series(category_times)
+        print("lifetime stats")
+        s.describe()
+
+        while len(category_times) > 10:
+            category_times.pop(0)
+
+        s = pd.Series(category_times)
+        print("last 10 stats")
+        s.describe()
+
+        is_quit = "q" == input("q or n: \n")
+
+
+if __name__ == "__main__":
+    # have some stats functions to automatically find last 10 average, mean, mode, stddev, etc for all time and last 10
+    # TODO make pylint warnings go away
+
+    csv_obj = CSV()
+    problems = csv_obj.readCSVdict()
+    times = csv_obj.readStatsCSV()
+    # problem_list = sorted(problems["Kinematics"], key=lambda x: x.number)
+
+    csv_obj.writeStatsCSV(times)
     csv_obj.writeCSV(problems)
